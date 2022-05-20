@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mini form</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Completa el formulario</h1>
+      <form id="formulario" class="row g-3">
+        <div class="col-md-6">
+          <label>Nombre</label>
+          <input type="text" class="form-control" id="nombre" required />
+        </div>
+        <div class="col-md-6">
+          <label>apellido</label>
+          <input type="text" class="form-control" id="apellido" required />
+        </div>
+        <div class="cold-md-12">
+          <button class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+      <hr />
+    </div>
+
+    <div id="cartas" class="container"></div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
