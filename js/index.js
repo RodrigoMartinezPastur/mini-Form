@@ -24,10 +24,10 @@ function formMax(e) {
 
 const cargarTarjeta = () => {
   cartas.innerHTML = "";
-  forms.map(function (nombreApllido) {
+  forms.map(function (nombreYapellido) {
     let div = document.createElement("div");
     div.classList = "card mb-1";
-    let tarjeta = `<div class="card-body"> ${nombreApllido.nick}  ${nombreApllido.lastName}</div>`;
+    let tarjeta = `<div class="card-body"> ${nombreYapellido.nombre}  ${nombreYapellido.apellido}</div>`;
     div.innerHTML = tarjeta;
     cartas.appendChild(div);
   });
