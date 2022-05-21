@@ -24,15 +24,20 @@ function formMax(e) {
 
 const cargarTarjeta = () => {
   cartas.innerHTML = "";
-  forms.map(function (nombreYapellido) {
+  forms.map(function (nombreYapellido, index) {
     let div = document.createElement("div");
     div.classList = "card mb-1";
-    let tarjeta = `<div class="card-body"> ${nombreYapellido.nombre}  ${nombreYapellido.apellido}</div>`;
+    let tarjeta = `<div class="card-body d-flex justify-content-between "> ${nombreYapellido.nombre}  ${nombreYapellido.apellido} <button class="btn btn-danger" onclick="borrarTarjeta(${index})">Borrar</button></div>`;
     div.innerHTML = tarjeta;
     cartas.appendChild(div);
   });
 };
 
+const borrarTarjeta = (index) => {
+  forms.splice(index, 1);
+  localStorage.setItem("form", JSON.stringify(forms));
+  cargarTarjeta();
+};
 document.getElementById("formulario").addEventListener("submit", formMax);
 
 cargarTarjeta();
